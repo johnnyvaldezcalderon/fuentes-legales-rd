@@ -38,6 +38,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      # Informativo, nunca bloquea: consultoria.gov.do está tras Cloudflare y
+      # rechaza al runner aunque responda 200 desde un navegador. Un fallo aquí
+      # es una señal para ir a comprobar a mano, no una rotura del catálogo.
       - name: Los portales siguen respondiendo
         continue-on-error: true
         run: |

@@ -109,7 +109,8 @@
     {
       "id": "juristeca",
       "organismo": "Juristeca — Escuela Nacional de la Judicatura",
-      "portal": "https://juristeca.enj.org",
+      "portal": "https://juristeca.edu.do",
+      "portal_jurisprudencia": "https://jurisprudencia.enj.org",
       "rama": "judicial",
       "publica": [
         "Legislación",
@@ -122,6 +123,7 @@
       "importancia": "media-alta",
       "por_que": "La vía práctica a la jurisprudencia, con vocabularios controlados de órgano, tribunal, ponente y tipo de acción o recurso que no existen en las demás fuentes.",
       "advertencias": [
+        "Son dos portales, no uno: juristeca.edu.do es el catálogo —redirige a /base/domenj— y jurisprudencia.enj.org es el buscador de jurisprudencia. Conviene saber a cuál se va según lo que se busque.",
         "La navegación HTML por documento que usaban los enlaces antiguos fue retirada. Las referencias guardadas de hace años pueden no resolver.",
         "Su clasificación por facetas es el mejor punto de entrada para buscar jurisprudencia por criterio, y no tiene equivalente en los otros portales."
       ]

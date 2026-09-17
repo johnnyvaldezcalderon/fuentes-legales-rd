@@ -17,7 +17,7 @@ que es la pregunta que casi nadie tiene escrita.
 | **[Tribunal Constitucional](https://www.tribunalconstitucional.gob.do)** | Sentencias, resoluciones, extractos | desde 2012 |
 | **[Senado — Memoria Histórica](https://memoriahistorica.senadord.gob.do)** | Contratos, resoluciones, expedientes | ~44,940 |
 | **[Cámara de Diputados — SIL](https://www.diputadosrd.gob.do/sil/)** | Iniciativas, sesiones, comisiones | ~5,875 iniciativas |
-| **[Juristeca — ENJ](https://juristeca.enj.org)** | Jurisprudencia, boletines, biblioteca | — |
+| **[Juristeca — ENJ](https://juristeca.edu.do)** | Jurisprudencia, boletines, biblioteca | — |
 
 El detalle completo, con metadatos disponibles y advertencias por fuente, está en
 [`datos/fuentes.json`](datos/fuentes.json).
@@ -37,7 +37,10 @@ primero hay que ubicar a cuál pertenece.
 
 **Jurisprudencia por criterio —órgano, tribunal, ponente, tipo de recurso—** →
 Juristeca. Su clasificación por facetas no tiene equivalente en los demás
-portales.
+portales. Son **dos** portales y conviene no confundirlos:
+[juristeca.edu.do](https://juristeca.edu.do) es el catálogo y
+[jurisprudencia.enj.org](https://jurisprudencia.enj.org) el buscador de
+jurisprudencia.
 
 **El expediente documental de algo legislativo** → Memoria Histórica del Senado.
 Es un archivo, no un catálogo de normas: ahí está el rastro en papel.
