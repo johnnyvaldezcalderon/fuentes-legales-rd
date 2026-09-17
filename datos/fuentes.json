@@ -1,0 +1,148 @@
+{
+  "version": "1.0.0",
+  "actualizado": "2026-09-17",
+  "nota": "Catálogo de dónde publica el Estado dominicano su documentación legal. Describe qué existe, en qué forma y con qué huecos. No incluye procedimientos de extracción; ver el README.",
+  "fuentes": [
+    {
+      "id": "consultoria",
+      "organismo": "Consultoría Jurídica del Poder Ejecutivo",
+      "portal": "https://consultoria.gov.do",
+      "rama": "ejecutivo",
+      "publica": [
+        "Leyes",
+        "Decretos",
+        "Reglamentos",
+        "Resoluciones",
+        "Varios"
+      ],
+      "volumen_aproximado": 108000,
+      "formato": "PDF",
+      "metadatos_disponibles": [
+        "número",
+        "título",
+        "número de Gaceta Oficial",
+        "fecha de promulgación"
+      ],
+      "requiere_ocr": "parcialmente",
+      "importancia": "alta",
+      "por_que": "Es la fuente central de la normativa vigente del país. Si solo vas a consultar un sitio, es este.",
+      "advertencias": [
+        "El portal se reconstruyó en 2026. Las URL anteriores a esa fecha —las que aparecen en citas, marcadores y trabajos académicos previos— ya no resuelven. Si encuentras un enlace roto a un decreto, casi seguro es esto y no que el documento se haya retirado.",
+        "Las tablas contienen registros vacíos: filas sin número, sin título, sin Gaceta y sin fecha, para las que el origen responde 404 o 403. No son documentos retirados ni errores de red: no llegaron a existir. Al contar cobertura hay que excluirlos o las cifras salen infladas.",
+        "Una parte de los documentos no tiene PDF disponible en el origen, aunque la ficha exista."
+      ]
+    },
+    {
+      "id": "tribunal-constitucional",
+      "organismo": "Tribunal Constitucional",
+      "portal": "https://www.tribunalconstitucional.gob.do",
+      "rama": "judicial",
+      "publica": [
+        "Sentencias",
+        "Resoluciones",
+        "Referencias",
+        "Comunicados",
+        "Extractos"
+      ],
+      "cobertura_temporal": "sentencias desde 2012, año de creación del tribunal",
+      "formato": "PDF",
+      "requiere_ocr": "parcialmente",
+      "importancia": "alta",
+      "por_que": "Interpretación constitucional vinculante. Sus sentencias condicionan la lectura de todo lo demás.",
+      "advertencias": [
+        "Los listados no enlazan el PDF directamente: siempre hay una página intermedia de detalle por documento.",
+        "Los PDF no se sirven desde el dominio del tribunal, sino desde almacenamiento externo. Un enlace guardado puede caducar aunque la sentencia siga publicada.",
+        "El listado se filtra por año y hay que verificar que el portal devuelva el año pedido: no siempre respeta el filtro.",
+        "Hay sentencias y resoluciones publicadas sin capa de texto aprovechable."
+      ]
+    },
+    {
+      "id": "senado-memoria-historica",
+      "organismo": "Senado de la República — Memoria Histórica",
+      "portal": "https://memoriahistorica.senadord.gob.do",
+      "rama": "legislativo",
+      "publica": [
+        "Contratos",
+        "Resoluciones",
+        "Expedientes legislativos",
+        "Documentación histórica"
+      ],
+      "volumen_aproximado": 44940,
+      "formato": "PDF",
+      "plataforma": "DSpace 7",
+      "requiere_ocr": "en buena medida",
+      "importancia": "media-alta",
+      "por_que": "Es el archivo legislativo documental: donde está el rastro de cómo se tramitó algo, no solo el resultado.",
+      "advertencias": [
+        "El dominio es senadord.gob.do, con D. No es senado.gob.do — un error frecuente al citarlo.",
+        "Al ser un repositorio documental, conviven PDF con imágenes de catálogo (fotografías de personas, miniaturas). Los metadatos no siempre distinguen unos de otros.",
+        "Buena parte del fondo es material digitalizado: espera escaneos sin capa de texto."
+      ]
+    },
+    {
+      "id": "sil",
+      "organismo": "Cámara de Diputados — Sistema de Información Legislativa (SIL)",
+      "portal": "https://www.diputadosrd.gob.do/sil/",
+      "rama": "legislativo",
+      "publica": [
+        "Iniciativas legislativas",
+        "Sesiones",
+        "Comisiones",
+        "Legisladores",
+        "Actividades",
+        "Grupos parlamentarios"
+      ],
+      "volumen_aproximado": 6041,
+      "desglose_volumen": {
+        "iniciativas": 5875,
+        "sesiones": 166
+      },
+      "formato": "PDF",
+      "requiere_ocr": "parcialmente",
+      "importancia": "media-alta",
+      "por_que": "Es donde se ve el proceso: quién propuso qué, cuándo se discutió y en qué quedó. Compartido entre Senado y Cámara.",
+      "advertencias": [
+        "La documentación cuelga de un elemento padre —una iniciativa, una sesión—, no de un listado plano de documentos. Para llegar a un PDF hay que saber primero a qué iniciativa pertenece.",
+        "Las secciones de comisiones, legisladores, actividades y grupos existen pero están menos consolidadas que iniciativas y sesiones."
+      ]
+    },
+    {
+      "id": "juristeca",
+      "organismo": "Juristeca — Escuela Nacional de la Judicatura",
+      "portal": "https://juristeca.enj.org",
+      "rama": "judicial",
+      "publica": [
+        "Legislación",
+        "Jurisprudencia",
+        "Boletines judiciales",
+        "Biblioteca Virtual"
+      ],
+      "formato": "PDF",
+      "requiere_ocr": "parcialmente",
+      "importancia": "media-alta",
+      "por_que": "La vía práctica a la jurisprudencia, con vocabularios controlados de órgano, tribunal, ponente y tipo de acción o recurso que no existen en las demás fuentes.",
+      "advertencias": [
+        "La navegación HTML por documento que usaban los enlaces antiguos fue retirada. Las referencias guardadas de hace años pueden no resolver.",
+        "Su clasificación por facetas es el mejor punto de entrada para buscar jurisprudencia por criterio, y no tiene equivalente en los otros portales."
+      ]
+    }
+  ],
+  "huecos_conocidos": [
+    {
+      "tema": "Gaceta Oficial",
+      "detalle": "Los documentos de Consultoría citan su número de Gaceta, pero el texto de la Gaceta como publicación no está entre estas fuentes. Para el número exacto hay que ir a la Gaceta misma."
+    },
+    {
+      "tema": "Normativa municipal",
+      "detalle": "Ordenanzas y resoluciones de los 158 municipios y 231 distritos municipales no tienen repositorio central. Cada ayuntamiento publica —o no— por su cuenta."
+    },
+    {
+      "tema": "Normativa sectorial de organismos reguladores",
+      "detalle": "Superintendencias, DGII, direcciones generales y reguladores publican sus resoluciones en sus propios portales, con criterios distintos. No están consolidados aquí."
+    },
+    {
+      "tema": "Consolidación de vigencia",
+      "detalle": "Ninguna fuente dice de forma fiable si una norma sigue vigente, fue derogada o modificada. Hay que reconstruirlo cruzando documentos, y es la parte más difícil de todo esto."
+    }
+  ]
+}

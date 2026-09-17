@@ -1,0 +1,56 @@
+name: validar catálogo
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: El JSON es válido y está completo
+        run: |
+          python - <<'PY'
+          import json, io, sys
+          d = json.load(io.open("datos/fuentes.json", encoding="utf-8"))
+          req = {"id","organismo","portal","rama","publica","formato",
+                 "importancia","por_que","advertencias"}
+          assert d["fuentes"], "el catálogo está vacío"
+          vistos = set()
+          for f in d["fuentes"]:
+              falta = req - set(f)
+              assert not falta, f"{f.get('id')}: faltan campos {falta}"
+              assert f["id"] not in vistos, f"id duplicado: {f['id']}"
+              vistos.add(f["id"])
+              assert f["portal"].startswith("https://"), f"{f['id']}: el portal debe ser https"
+              assert f["advertencias"], f"{f['id']}: sin advertencias documentadas"
+              assert len(f["por_que"]) > 40, f"{f['id']}: 'por_que' demasiado escueto"
+          assert d["huecos_conocidos"], "no hay huecos documentados"
+          print(f"OK: {len(d['fuentes'])} fuentes, {len(d['huecos_conocidos'])} huecos")
+          PY
+
+  enlaces:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Los portales siguen respondiendo
+        continue-on-error: true
+        run: |
+          python - <<'PY'
+          import json, io, urllib.request, ssl
+          ctx = ssl.create_default_context()
+          d = json.load(io.open("datos/fuentes.json", encoding="utf-8"))
+          for f in d["fuentes"]:
+              url = f["portal"]
+              try:
+                  req = urllib.request.Request(url, headers={"User-Agent": "fuentes-legales-rd/1.0"})
+                  with urllib.request.urlopen(req, timeout=30, context=ctx) as r:
+                      print(f"{r.status}  {f['id']:26} {url}")
+              except Exception as e:
+                  print(f"---  {f['id']:26} {url}  ({type(e).__name__})")
+          PY
