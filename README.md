@@ -84,16 +84,11 @@ documentos retirados ni fallos de red — no llegaron a existir.
 Si estás midiendo cobertura, exclúyelos o las cifras salen infladas y vas a
 perseguir errores que no lo son. A nosotros nos costó entenderlo.
 
-## Qué NO incluye esto, y por qué
+## Para quién es
 
-No hay endpoints, ni parámetros, ni cuerpos de petición, ni los rodeos concretos
-para extraer en masa de cada portal.
-
-Eso es deliberado y prefiero decirlo de frente: reunir esa parte costó mucho
-trabajo y sostiene un producto. Lo que sí es de todos es saber **dónde está la
-ley y en qué estado**, y eso está aquí completo. Un periodista, un investigador o
-un estudiante que necesite ubicar un documento tiene con esto todo lo que
-necesita.
+Saber **dónde está la ley y en qué estado** es de todos, y eso está aquí
+completo. Un periodista, un investigador o un estudiante que necesite ubicar un
+documento tiene con esto todo lo que necesita.
 
 Si trabajas en algo de interés público y te hace falta más, escribe y lo
 conversamos.

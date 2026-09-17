@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "actualizado": "2026-09-17",
-  "nota": "Catálogo de dónde publica el Estado dominicano su documentación legal. Describe qué existe, en qué forma y con qué huecos. No incluye procedimientos de extracción; ver el README.",
+  "nota": "Catálogo de dónde publica el Estado dominicano su documentación legal: qué existe, en qué forma, cuánto hay y con qué huecos.",
   "fuentes": [
     {
       "id": "consultoria",
